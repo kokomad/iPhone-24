@@ -1,0 +1,9 @@
+{
+  "appId": "com.khader.royalgold",
+  "appName": "Royal Gold",
+  "webDir": "www",
+  "backgroundColor": "#050505",
+  "android": {
+    "allowMixedContent": false
+  }
+}

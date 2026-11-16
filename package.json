@@ -1,0 +1,15 @@
+{
+  "name": "royal-gold-ios26",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Royal Gold iOS 26 style launcher UI — Developer: Khader Abo Salha",
+  "author": "Khader Abo Salha <mankhader@gmail.com>",
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}
