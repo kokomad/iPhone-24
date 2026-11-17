@@ -23,9 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Add real features to the web app
+        run: | cp app.js www/app.js grep -q 'app.js' www/index.html || sed -i 's#</body>#<script src="app.js"></script></body>#' www/index.html 
       - name: Add Android platform
         run: npx cap add android
 
+      - name: Add permissions (camera, location)
+        run: | F=android/app/src/main/AndroidManifest.xml sed -i 's#</manifest># <uses-permission android:name="android.permission.CAMERA" />\n <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />\n <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n <uses-permission android:name="android.permission.VIBRATE" />\n <uses-feature android:name="android.hardware.camera" android:required="false" />\n</manifest>#' $F grep -c 'permission.CAMERA' $F 
       - name: Generate icons and splash
         run: npx capacitor-assets generate --android --iconBackgroundColor '#0b0905' --splashBackgroundColor '#050505'
 
