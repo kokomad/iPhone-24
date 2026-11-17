@@ -1,15 +1,22 @@
 {
-  "name": "royal-gold-ios26",
-  "version": "1.0.0",
+  "name": "phantom-x-launcher",
+  "version": "2.0.0",
   "private": true,
-  "description": "Royal Gold iOS 26 style launcher UI — Developer: Khader Abo Salha",
-  "author": "Khader Abo Salha <mankhader@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android"
+  },
   "dependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0"
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/status-bar": "^7.0.0"
   },
   "devDependencies": {
-    "@capacitor/assets": "^3.0.5",
-    "@capacitor/cli": "^7.0.0"
+    "@capacitor/cli": "^7.4.3",
+    "vite": "^6.4.1"
   }
 }

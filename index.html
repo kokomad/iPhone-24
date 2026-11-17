@@ -1,193 +1,81 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="author" content="Khader Abo Salha"><meta name="theme-color" content="#090909"><title>iPhone iOS 26 — Royal Gold</title>
-<style>
-:root{--bg:#080808;--panel:rgba(255,255,255,.085);--panel2:rgba(255,255,255,.13);--line:rgba(255,220,150,.22);--gold:#e7bd70;--gold2:#fff0c4;--muted:#aaa49a;--text:#fffaf0;--green:#39d98a;--blue:#69baff;--red:#ff5b63}*{box-sizing:border-box}body{margin:0;background:#050505;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh;display:grid;place-items:center;padding:12px}.phone{width:min(100%,430px);height:min(920px,calc(100dvh - 24px));min-height:650px;border:1px solid #8d7041;border-radius:42px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 12% 12%,#76521c 0,transparent 34%),radial-gradient(ellipse at 90% 80%,#59401d 0,transparent 34%),linear-gradient(145deg,#17130d,#050505 48%,#211a10);box-shadow:0 0 0 5px #17130d,0 25px 90px #000;isolation:isolate}.phone:before{content:"";position:absolute;inset:-20%;z-index:-1;background:conic-gradient(from 40deg at 48% 48%,transparent,#b58a42 9%,#fff0bf 11%,transparent 16%,transparent 52%,#9a6a2d 60%,#fff1bf 62%,transparent 68%);filter:blur(26px);opacity:.34}.status{height:42px;padding:12px 23px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;direction:ltr}.status .right{display:flex;gap:7px;align-items:center}.island{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:105px;height:28px;background:#000;border-radius:20px;z-index:20;border:1px solid #272727}.screen{height:calc(100% - 42px - 72px);overflow:auto;padding:12px 17px 24px;scrollbar-width:none}.screen::-webkit-scrollbar{display:none}.nav{height:72px;position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;align-items:center;background:rgba(10,10,10,.75);backdrop-filter:blur(24px);border-top:1px solid var(--line);padding-bottom:8px}.nav button{border:0;background:none;color:#aaa;display:grid;gap:3px;justify-items:center;font-size:10px}.nav button.active{color:var(--gold2)}.nav .ico{font-size:21px}.pagehead{display:flex;justify-content:space-between;align-items:center;margin:7px 0 18px}.pagehead h1{font-size:27px;margin:0;font-weight:750;letter-spacing:-.5px}.sub{color:var(--muted);font-size:12px}.glass{background:var(--panel);border:1px solid var(--line);border-radius:22px;backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 #ffffff12}.widget{padding:16px;margin-bottom:13px}.weather{display:flex;justify-content:space-between;align-items:center}.temp{font-size:48px;font-weight:200}.gold{color:var(--gold2)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 9px;margin:20px 0}.app{border:0;background:none;color:var(--text);display:grid;justify-items:center;gap:6px;font-size:11px;min-width:0}.appicon{width:57px;height:57px;border-radius:17px;display:grid;place-items:center;font-size:27px;background:linear-gradient(145deg,#fff2ce,#9d7135 52%,#32200b);color:#17110a;box-shadow:0 7px 20px #0008,inset 0 1px 2px #fff9}.app:nth-child(4n+2) .appicon{background:linear-gradient(145deg,#fff,#777);}.app:nth-child(4n+3) .appicon{background:linear-gradient(145deg,#2d2b28,#080808);color:var(--gold2);border:1px solid #b18a4c}.app:nth-child(4n) .appicon{background:linear-gradient(145deg,#e9c77f,#8c5c20);}.dock{display:flex;justify-content:space-around;padding:13px 8px;margin-top:17px;border-radius:25px;background:#ffffff1c;border:1px solid #ffffff30;backdrop-filter:blur(20px)}.dock .appicon{width:53px;height:53px}.search{padding:11px 14px;border-radius:22px;background:#ffffff16;border:1px solid #ffffff18;color:#ccc;text-align:center;margin:10px 0}.row{display:flex;align-items:center;gap:12px;padding:13px 4px;border-bottom:1px solid #ffffff13}.row:last-child{border:0}.row .symbol{width:35px;height:35px;border-radius:11px;background:#b58a4233;display:grid;place-items:center;color:var(--gold2);font-size:18px}.row .grow{flex:1}.row b{font-size:14px}.row small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.chev{color:#777}.pill{padding:5px 9px;border-radius:20px;background:#d4aa5a22;color:var(--gold2);font-size:11px}.btn{border:1px solid var(--line);background:linear-gradient(135deg,#e8c783,#9a6a2b);color:#171009;border-radius:14px;padding:11px 15px;font-weight:700}.btn.ghost{background:#ffffff12;color:var(--text)}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{padding:14px;min-height:90px}.tile strong{font-size:19px}.toggle{width:42px;height:25px;border-radius:20px;background:#555;position:relative;border:0}.toggle:after{content:"";position:absolute;width:19px;height:19px;top:3px;right:3px;border-radius:50%;background:#fff;transition:.2s}.toggle.on{background:#bd9147}.toggle.on:after{right:20px}.field{width:100%;padding:13px;border-radius:13px;background:#ffffff12;border:1px solid var(--line);color:white;outline:none;margin:6px 0}.bubble{padding:10px 13px;border-radius:17px;margin:9px 0;max-width:82%;background:#ffffff18;font-size:13px}.bubble.me{margin-right:auto;background:#8d642e;color:#fff8e9}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.photo{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,#c79b54,#241a0e 65%,#090909);display:grid;place-items:center;font-size:30px}.locktime{text-align:center;font-size:68px;font-weight:200;margin:38px 0 3px;letter-spacing:-3px}.lockdate{text-align:center;color:#e9d7b4}.lockbottom{position:absolute;bottom:25px;left:25px;right:25px;display:flex;justify-content:space-between}.circle{width:48px;height:48px;border-radius:50%;background:#ffffff22;border:1px solid #ffffff44;display:grid;place-items:center;font-size:20px}.control-overlay{position:absolute;inset:0;z-index:30;background:#090909ed;backdrop-filter:blur(25px);padding:52px 20px;display:none}.control-overlay.show{display:block}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.control{padding:17px;border-radius:22px;background:#ffffff17;border:1px solid #ffffff20;min-height:85px}.control span{font-size:23px}.control small{display:block;color:#c9bda8;margin-top:8px}.toast{position:absolute;top:55px;left:50%;transform:translateX(-50%);background:#282116;border:1px solid var(--line);padding:9px 15px;border-radius:20px;font-size:12px;z-index:50;display:none;white-space:nowrap}.toast.show{display:block}@media(max-height:700px){.phone{min-height:0}.screen{padding-top:4px}.grid{gap:10px 7px;margin:12px 0}.appicon{width:49px;height:49px}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#07040f">
+<title>PHANTOM X Launcher</title>
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<div id="root"><main id="stage">
+  <div id="art"></div>
 
-/* ===== Native app mode (Android APK) — Developer: Khader Abo Salha ===== */
-html,body{height:100%;overscroll-behavior:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
-@media (max-width:600px),(pointer:coarse){
- body{display:block;padding:0;min-height:100dvh;background:#050505}
- .phone{width:100%;height:100dvh;min-height:0;border:0;border-radius:0;box-shadow:none;padding-top:env(safe-area-inset-top,0px)}
- .status{display:none}
- .screen{height:calc(100% - 72px - env(safe-area-inset-bottom,0px));padding-top:10px}
- .nav{height:calc(72px + env(safe-area-inset-bottom,0px));padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
-}
-</style></head>
-<body><main class="phone"><div class="status"><span>9:41</span><button class="island" aria-label="Dynamic Island" onclick="toggleIsland()" style="cursor:pointer"></button><div class="right"><span>▮▮▮</span><span>◖</span><span>100% ▰</span></div></div><div id="screen" class="screen"></div><nav class="nav"><button data-page="home" class="active"><span class="ico">⌂</span>الرئيسية</button><button data-page="apps"><span class="ico">▦</span>التطبيقات</button><button data-page="search"><span class="ico">⌕</span>بحث</button><button data-page="settings"><span class="ico">⚙</span>الإعدادات</button></nav><section id="control" class="control-overlay"><div class="pagehead"><h1>مركز التحكم</h1><button class="btn ghost" onclick="closeControl()">تم</button></div><div class="control-grid"><div class="control" onclick="toggleControl(this)"><span>◉</span><small>وضع الطيران</small></div><div class="control" onclick="toggleControl(this)"><span>⌁</span><small>Wi‑Fi متصل</small></div><div class="control" onclick="toggleControl(this)"><span>ᛒ</span><small>Bluetooth</small></div><div class="control" onclick="toggleControl(this)"><span>☾</span><small>عدم الإزعاج</small></div><div class="control" onclick="toggleControl(this)"><span>▣</span><small>قفل الاتجاه</small></div><div class="control" onclick="toggleControl(this)"><span>◐</span><small>الوضع الداكن</small></div></div><div class="glass widget" style="margin-top:14px"><b>السطوع</b><input type="range" class="field" min="0" max="100" value="80"><b>الصوت</b><input type="range" class="field" min="0" max="100" value="55"></div></section><section id="notifications" class="shade">
-      <div class="shade-top"><span id="shadeTime">9:41</span><button class="btn ghost" onclick="closeNotifications()">إغلاق</button></div>
-      <div class="shade-date" id="shadeDate">الثلاثاء، 17 نوفمبر</div>
-      <div class="shade-controls">
-        <button onclick="shadeToggle(this)">✈<small>الطيران</small></button>
-        <button onclick="shadeToggle(this)">⌁<small>Wi‑Fi</small></button>
-        <button onclick="shadeToggle(this)">ᛒ<small>Bluetooth</small></button>
-        <button onclick="shadeToggle(this)">☾<small>التركيز</small></button>
-      </div>
-      <h3>مركز الإشعارات</h3>
-      <div class="notice"><b>التقويم</b><small>موعدك القادم</small><p>لديك موعد تجريبي اليوم عند 10:30</p></div>
-      <div class="notice"><b>التذكيرات</b><small>قبل قليل</small><p>لا تنسَ مراجعة جدولك اليومي</p></div>
-      <div class="notice"><b>النظام</b><small>الآن</small><p>مرحباً بك في تجربة Royal Gold</p></div>
-      <button class="btn ghost" onclick="clearNotices()">مسح الإشعارات</button>
-    </section>
-    <section id="switcher" class="switcher">
-      <div class="pagehead"><h1>التطبيقات المفتوحة</h1><button class="btn ghost" onclick="closeSwitcher()">تم</button></div>
-      <div class="glass widget" onclick="go('home');closeSwitcher()"><b>⌂ الرئيسية</b><p class="sub">العودة إلى الشاشة الرئيسية</p></div>
-      <div class="glass widget" onclick="go('settings');closeSwitcher()"><b>⚙ الإعدادات</b><p class="sub">آخر تطبيق مفتوح</p></div>
-      <button class="btn" onclick="go('home');closeSwitcher()">إغلاق الكل</button>
-    </section>
-    <div id="toast" class="toast"></div></main>
-<script>
-const screen=document.getElementById('screen');let current='home';const apps=[['الهاتف','☎','phone'],['الرسائل','▤','messages'],['الصور','✿','photos'],['الكاميرا','◎','camera'],['Safari','◉','safari'],['الخرائط','⌖','maps'],['الطقس','☼','weather'],['التقويم','▦','calendar'],['الملاحظات','▤','notes'],['التذكيرات','✓','reminders'],['الساعة','◷','clock'],['الملفات','▣','files'],['App Store','A','store'],['الموسيقى','♫','music'],['الصحة','♡','health'],['المحفظة','▤','wallet']];
-function head(t,s=''){return `<div class="pagehead"><div><h1>${t}</h1><div class="sub">${s}</div></div><span class="pill">ROYAL GOLD</span></div>`}function appGrid(list=apps){return `<div class="grid">${list.map(a=>`<button class="app" onclick="go('${a[2]}')"><span class="appicon">${a[1]}</span>${a[0]}</button>`).join('')}</div>`}function row(icon,title,desc='',action=''){return `<div class="row" ${action?`onclick="${action}"`:''}><span class="symbol">${icon}</span><div class="grow"><b>${title}</b>${desc?`<small>${desc}</small>`:''}</div><span class="chev">‹</span></div>`}
-function home(){return `${head('مرحباً بك','الثلاثاء، 17 نوفمبر')}<div class="actionbar"><button class="btn ghost" onclick="go('lock')">◉ شاشة القفل</button><button class="btn ghost" onclick="openNotifications()">♧ الإشعارات</button></div><div class="glass widget weather"><div><div class="sub">عمّان · سماء صافية</div><div class="temp">22°</div><div class="sub">العظمى 25° · الصغرى 16°</div></div><div style="font-size:48px">☀️</div></div><div class="two"><div class="glass tile"><div class="sub">الثلاثاء</div><strong>17</strong><div class="sub">موعدك القادم · 10:30</div></div><div class="glass tile"><div class="sub">البطارية</div><strong class="gold">100%</strong><div class="sub">شحن كامل</div></div></div>${appGrid(apps.slice(0,12))}<div class="dock">${apps.slice(0,4).map(a=>`<button class="app" onclick="go('${a[2]}')"><span class="appicon">${a[1]}</span></button>`).join('')}</div><div class="search" onclick="go('search')">⌕　بحث في iPhone</div>`}
-function settings(){let items=[['✈','نمط الطيران','إيقاف'],['⌁','Wi‑Fi','متصل'],['ᛒ','Bluetooth','متصل'],['▣','خلوي','إعدادات الشبكة'],['🔔','الإشعارات','الأصوات والشارات'],['☾','التركيز','عدم الإزعاج والنوم'],['⌘','عام','تحديث البرامج، التخزين، اللغة'],['☼','الشاشة والسطوع','المظهر وحجم النص'],['🔒','الخصوصية والأمان','الموقع والأذونات'],['🔋','البطارية','صحة البطارية والاستخدام'],['♿','تسهيلات الاستخدام','الرؤية والحركة'],['🆘','طوارئ SOS','جهات اتصال الطوارئ']];return `${head('الإعدادات','تخصيص جهازك')}<div class="glass widget"><input class="field" placeholder="بحث في الإعدادات" oninput="filterRows(this)"></div><div class="glass widget" id="settingsRows">${items.map(x=>row(x[0],x[1],x[2],`toastMsg('${x[1]} — خيارات تجريبية')`)).join('')}</div><div class="sub" style="text-align:center">iOS 26 · نموذج واجهة تجريبي</div>`}
-function basePage(p){switch(p){case'home':return home();case'apps':return `${head('مكتبة التطبيقات','كل تطبيقاتك في مكان واحد')}${appGrid()}`;case'settings':return settings();case'phone':return `${head('الهاتف','المكالمات وجهات الاتصال')}<div class="glass widget"><input class="field" placeholder="بحث عن جهة اتصال"><div class="two"><button class="btn" onclick="toastMsg('لوحة الاتصال')">لوحة المفاتيح</button><button class="btn ghost" onclick="toastMsg('جهات الاتصال')">جهات الاتصال</button></div></div>${row('☎','آخر المكالمات','لا توجد مكالمات حديثة')}${row('☆','المفضلة','أضف جهات الاتصال المفضلة')}`;case'messages':return `${head('الرسائل','iMessage · SMS')}<input class="field" placeholder="بحث"><div class="glass widget">${row('👤','أحمد','مرحباً! كيف حالك؟ · 9:32 ص')}${row('👤','العائلة','صورة · أمس')}${row('👤','سارة','شكراً لك · الاثنين')}</div><button class="btn" onclick="toastMsg('إنشاء رسالة جديدة')">＋ رسالة جديدة</button>`;case'photos':return `${head('الصور','مكتبتك · 128 صورة')}<div class="two"><button class="btn ghost">السنوات</button><button class="btn ghost">الأشهر</button></div><h3>الأخيرة</h3><div class="photo-grid">${Array.from({length:18},(_,i)=>`<div class="photo" style="filter:hue-rotate(${i*17}deg)">${['🌅','🏙️','🌴','🌄','🌌','🌺'][i%6]}</div>`).join('')}</div>`;case'camera':return `${head('الكاميرا','التقط لحظاتك')}<div class="glass" style="height:390px;display:grid;place-items:center;background:linear-gradient(145deg,#252017,#070707)"><div style="font-size:70px">◎</div><span class="sub">معاينة الكاميرا التجريبية</span></div><div class="two" style="margin-top:14px"><button class="btn" onclick="toastMsg('تم التقاط صورة تجريبية')">● التقاط</button><button class="btn ghost" onclick="go('photos')">الصور</button></div>`;case'safari':return `${head('Safari','تصفح الويب')}<input class="field" id="url" value="https://www.apple.com" placeholder="ابحث أو أدخل عنوان موقع"><button class="btn" onclick="openSite()">انتقال</button><div class="glass widget" style="margin-top:18px"><h3>المفضلة</h3>${row('','Apple','الموقع الرسمي')}${row('◎','محرك البحث','ابحث في الويب')}</div>`;case'calendar':return `${head('التقويم','نوفمبر 2026')}<div class="glass widget"><div class="two">${['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'].map((d,i)=>`<div class="tile"><small>${d}</small><strong>${15+i}</strong></div>`).join('')}</div></div>${row('🟣','10:30 ص','موعد شخصي')}${row('🟢','7:00 م','وقت للعائلة')}`;case'notes':return `${head('الملاحظات','كل ملاحظاتك')}<input class="field" placeholder="بحث"><div class="glass widget"><textarea class="field" rows="8" placeholder="ابدأ كتابة ملاحظة جديدة..."></textarea><button class="btn" onclick="toastMsg('تم حفظ الملاحظة على هذه الصفحة')">حفظ</button></div>`;case'search':return `${head('بحث','ابحث في التطبيقات والمحتوى')}<input class="field" placeholder="بحث في iPhone" oninput="searchApps(this.value)"><div id="searchResults">${appGrid(apps.slice(0,8))}</div>`;case'lock':return `<div class="locktime">9:41</div><div class="lockdate">الثلاثاء، 17 نوفمبر</div><div class="glass widget" style="margin-top:48px"><div class="weather"><div><div class="sub">عمّان</div><strong style="font-size:36px">22°</strong><div class="sub">سماء صافية</div></div><span style="font-size:38px">☀️</span></div></div><div class="lockbottom"><button class="circle" onclick="toastMsg('الكاميرا')">◎</button><button class="circle" onclick="go('home')">⌂</button></div>`;default:return `${head(apps.find(a=>a[2]===p)?.[0]||'التطبيق','واجهة تجريبية') }<div class="glass widget">${row('✦','مرحباً بك','هذه صفحة تطبيق تجريبية في نموذج iOS 26') }<button class="btn" onclick="go('home')">العودة للرئيسية</button></div>`}}
-function go(p){current=p;screen.innerHTML=page(p);screen.scrollTop=0;document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p))}function toastMsg(t){let e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1900)}function filterRows(i){document.querySelectorAll('#settingsRows .row').forEach(r=>r.style.display=r.innerText.includes(i.value)?'flex':'none')}function searchApps(q){let found=apps.filter(a=>a[0].toLowerCase().includes(q.toLowerCase()));document.getElementById('searchResults').innerHTML=appGrid(found)}function openSite(){let v=document.getElementById('url').value;if(!/^https?:\/\//.test(v))v='https://'+v;window.open(v,'_blank')}function toggleControl(e){e.style.background=e.style.background?'':'#b88a3d66'}function closeControl(){document.getElementById('control').classList.remove('show')}document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));let startY=0;document.querySelector('.phone').addEventListener('touchstart',e=>startY=e.touches[0].clientY,{passive:true});document.querySelector('.phone').addEventListener('touchend',e=>{let dy=e.changedTouches[0].clientY-startY;if(startY<65&&dy>80)document.getElementById('control').classList.add('show');if(dy>100&&current==='home')go('lock')},{passive:true});go('home');
-</script>
-<style>
-.island.expanded{width:calc(100% - 38px);height:66px;border-radius:25px;top:7px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;color:#f6e4bd;font-size:12px}
-.island.expanded:after{content:"تشغيل الآن　♫　Royal Gold";white-space:nowrap}
-.call-screen{height:calc(100% - 15px);display:flex;flex-direction:column;align-items:center;justify-content:space-around;text-align:center}
-.call-avatar{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;font-size:48px;background:linear-gradient(145deg,#f4d99c,#6e481c);color:#211507}
-.call-actions{display:flex;justify-content:space-around;width:100%;direction:ltr}
-.call-actions button{width:62px;height:62px;border:0;border-radius:50%;font-size:23px;color:white;background:#333}
-.call-actions .answer{background:#22b96b}.call-actions .decline{background:#ed4148}
-.siri-orb{width:180px;height:180px;border-radius:50%;margin:38px auto;background:radial-gradient(circle at 35% 25%,#fff7d6,#d9ad59 25%,#9c6cd5 48%,#276a9a 72%,#090909);box-shadow:0 0 50px #c49a4c88,inset 0 0 30px #fff8;animation:pulse 2.5s infinite}
-@keyframes pulse{50%{transform:scale(1.04);filter:hue-rotate(25deg)}}
-.store-card{padding:15px;margin:10px 0;display:flex;align-items:center;gap:13px}
-.store-icon{width:55px;height:55px;border-radius:15px;background:linear-gradient(145deg,#f7dda0,#956526);display:grid;place-items:center;color:#201507;font-size:25px}
-.store-card .grow{flex:1}.store-card small{display:block;color:var(--muted);margin-top:4px}
-.big-number{font-size:48px;font-weight:200;color:var(--gold2)}
-</style>
-<script>
-const extraApps=[['البريد','✉','mail'],['المحفظة','▤','wallet'],['الصحة','♡','health'],['الخرائط','⌖','maps'],['الطقس','☼','weather'],['الساعة','◷','clock'],['التذكيرات','✓','reminders'],['الملفات','▣','files'],['الموسيقى','♫','music'],['App Store','A','store'],['الحاسبة','＋','calculator'],['Siri','✦','siri'],['Face ID','◉','faceid'],['مكالمة واردة','☎','incoming']];
-for(const a of extraApps){if(!apps.some(x=>x[2]===a[2]))apps.push(a)}
-function page(p){
- switch(p){
- case 'siri': return `${head('Siri','مساعدك الذكي · محاكاة تفاعلية')}<div class="siri-orb"></div><div style="text-align:center"><h2>كيف يمكنني مساعدتك؟</h2><p class="sub">اختر تجربة سريعة</p></div><div class="glass widget">${row('☀','ما حالة الطقس؟')}${row('⏰','اضبط مؤقتاً')}${row('♫','افتح الموسيقى')}</div><button class="btn" onclick="toastMsg('Siri في وضع العرض التجريبي')">● اضغط للتحدث</button>`;
- case 'faceid': return `${head('Face ID','الخصوصية والأمان')}<div class="glass widget" style="text-align:center;padding:28px"><div style="font-size:76px;color:var(--gold2)">◎</div><h2>التعرّف على الوجه</h2><p class="sub">واجهة توضيحية لإعداد Face ID</p><button class="btn" onclick="toastMsg('تم تشغيل محاكاة Face ID')">إعداد Face ID</button></div>${row('🔒','فتح قفل iPhone','استخدام الوجه لفتح الجهاز')}${row('🛒','المشتريات','المصادقة على عمليات الشراء')}`;
- case 'incoming': return `<div class="call-screen"><div><div class="sub">iPhone · مكالمة واردة</div><div class="call-avatar">👤</div><h1>أحمد محمد</h1><div class="sub">اتصال محمول</div></div><div class="call-actions"><button class="decline" onclick="toastMsg('تم رفض المكالمة التجريبية')">✕</button><button class="answer" onclick="toastMsg('تم الرد على المكالمة التجريبية')">☎</button></div></div>`;
- case 'store': return `${head('App Store','اكتشف تطبيقات جديدة')}<div class="glass widget"><div class="sub">مميز اليوم</div><h2>اكتشف عالم التطبيقات</h2><p class="sub">متجر تجريبي بتصميم ذهبي</p><button class="btn" onclick="toastMsg('نسخة عرض غير متصلة بالمتجر')">استكشاف</button></div>${[['✦','تطبيقات مقترحة','إنتاجية وأدوات'],['♫','الموسيقى والصوت','ترفيه'],['◎','التصوير','صور وفيديو'],['⌖','السفر والخرائط','تنقل واكتشاف']].map(x=>`<div class="glass store-card"><div class="store-icon">${x[0]}</div><div class="grow"><b>${x[1]}</b><small>${x[2]}</small></div><button class="btn ghost" onclick="toastMsg('زر تنزيل تجريبي')">تنزيل</button></div>`).join('')}`;
- case 'mail': return `${head('البريد','صندوق الوارد')}<div class="glass widget">${row('✉','Apple','مرحباً بك في iPhone · اليوم')}${row('✉','الفواتير','تم استلام إيصالك · أمس')}${row('✉','النشرة الأسبوعية','آخر الأخبار · الأحد')}</div><button class="btn" onclick="toastMsg('إنشاء رسالة جديدة')">＋ رسالة جديدة</button>`;
- case 'wallet': return `${head('المحفظة','بطاقاتك وتذاكرك')}<div class="glass widget" style="padding:22px;background:linear-gradient(135deg,#b58a42,#3b2914)"><div class="sub">ROYAL GOLD</div><h2>بطاقة افتراضية</h2><div style="margin-top:35px;letter-spacing:3px">••••　••••　••••　2048</div><div class="sub">واجهة توضيحية فقط</div></div>${row('＋','إضافة بطاقة','لا تتم معالجة مدفوعات')}`;
- case 'health': return `${head('الصحة','ملخص النشاط')}<div class="two"><div class="glass tile"><div class="sub">الخطوات</div><strong>6,240</strong></div><div class="glass tile"><div class="sub">النشاط</div><strong>32 د</strong></div></div><div class="glass widget">${row('♡','معدل القلب','بيانات تجريبية')}${row('🚶','المشي والجري','ملخص النشاط')}${row('☾','النوم','مدة النوم')}</div>`;
- case 'maps': return `${head('الخرائط','استكشف الأماكن')}<input class="field" placeholder="ابحث عن مكان أو عنوان"><div class="glass widget" style="height:290px;display:grid;place-items:center;background:linear-gradient(35deg,#24352a,#384536 40%,#202d26 41%,#17231d)"><div style="text-align:center"><div style="font-size:55px">⌖</div><b>خريطة تجريبية</b><div class="sub">لا تتوفر ملاحة فعلية</div></div></div>${row('☆','المفضلة','الأماكن المحفوظة')}`;
- case 'weather': return `${head('الطقس','عمّان · الأردن')}<div class="glass widget weather"><div><div class="sub">مشمس غالباً</div><div class="big-number">22°</div><div class="sub">العظمى 25° · الصغرى 16°</div></div><span style="font-size:58px">☀️</span></div><div class="two">${['9 ص|20°','12 ظ|24°','3 م|25°','6 م|21°'].map(x=>`<div class="glass tile"><div class="sub">${x.split('|')[0]}</div><strong>${x.split('|')[1]}</strong></div>`).join('')}</div><p class="sub">بيانات عرض ثابتة وليست توقعات مباشرة.</p>`;
- case 'clock': return `${head('الساعة','أدوات الوقت')}<div class="glass widget" style="text-align:center"><div class="big-number" id="liveClock">9:41:00</div><div class="sub">الساعة المحلية للجهاز</div></div><button class="btn" onclick="startTimer()">بدء مؤقت 10 ثوانٍ</button>${row('◷','المنبه','إضافة وتعديل المنبهات')}${row('⏱','ساعة الإيقاف','قياس الوقت')}`;
- case 'reminders': return `${head('التذكيرات','نظّم يومك')}<div class="glass widget"><input id="reminderInput" class="field" placeholder="تذكير جديد"><button class="btn" onclick="addReminder()">إضافة تذكير</button><div id="reminderList"></div></div>`;
- case 'files': return `${head('الملفات','تصفّح ملفاتي')}<div class="glass widget">${row('☁','iCloud Drive','مزامنة غير مفعلة')}${row('▣','على iPhone','ملفاتي')}${row('⬇','التنزيلات','العناصر التي تم تنزيلها')}${row('🗑','المحذوفة مؤخراً','')}</div>`;
- case 'music': return `${head('الموسيقى','استمع الآن')}<div class="glass widget" style="text-align:center;padding:25px"><div style="font-size:75px">♫</div><h2>Royal Gold Mix</h2><div class="sub">قائمة تشغيل تجريبية</div><button class="btn" onclick="toastMsg('تشغيل تجريبي')">▶ تشغيل</button></div>`;
- case 'calculator': return `${head('الحاسبة','عمليات حسابية')}<div class="glass widget"><input id="calcDisplay" class="field" value="0" readonly style="font-size:30px;text-align:left;direction:ltr"><div class="grid" style="grid-template-columns:repeat(4,1fr);gap:8px">${['7','8','9','÷','4','5','6','×','1','2','3','−','0','.','=','+'].map(k=>`<button class="btn" style="min-height:54px" onclick="calcKey('${k}')">${k}</button>`).join('')}</div></div>`;
- default: return basePage(p);
- }
-}
-function toggleIsland(){document.querySelector('.island').classList.toggle('expanded')}
-function startTimer(){let n=10;toastMsg('بدأ المؤقت: 10 ثوانٍ');const t=setInterval(()=>{n--;if(n<=0){clearInterval(t);toastMsg('انتهى المؤقت!')}},1000)}
-function addReminder(){let i=document.getElementById('reminderInput'),v=i.value.trim();if(!v)return;let l=document.getElementById('reminderList');let d=document.createElement('div');d.className='row';let b=document.createElement('b');b.textContent=v;d.append('○ ',b);l.appendChild(d);i.value=''}
-function calcKey(k){let d=document.getElementById('calcDisplay');if(!d)return;if(k==='='){try{let s=d.value.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');if(!/^[0-9+*\\/. ()-]+$/.test(s))throw 0;d.value=String(Function('"use strict";return ('+s+')')())}catch(e){d.value='خطأ'}}else d.value=d.value==='0'?k:d.value+k}
-setInterval(()=>{let e=document.getElementById('liveClock');if(e)e.textContent=new Date().toLocaleTimeString('ar-JO')},1000);
-</script>
+  <!-- Live widgets (drawn over the artwork, same neon-glass style) -->
+  <section class="w" id="wClock" data-box="25,85,480,310">
+    <button class="hs" data-act="alarms" aria-label="الساعة"></button>
+    <div class="time"><span id="tm">7:24</span><b id="ap">PM</b></div>
+    <div class="date"><span id="dt"></span><button class="cal" data-act="calendar" aria-label="التقويم">▦</button></div>
+  </section>
+  <section class="w" id="wWeather" data-box="562,90,820,425">
+    <button class="hs" data-act="weather" aria-label="الطقس"></button>
+    <div class="wi" id="wIcon">🌙</div><div class="wt" id="wTemp">--°C</div>
+    <div class="wd" id="wDesc">جارٍ التحميل</div><div class="wc">📍 <span id="wCity">عمّان</span></div>
+    <div class="wh"><span id="wHi">↑--°</span><span id="wLo">↓--°</span></div>
+  </section>
+  <section class="w" id="wQuote" data-box="25,335,300,545">
+    <button class="hs" data-act="quote" aria-label="العبارة"></button>
+    <span class="q">❝</span><p id="qText"></p><span class="heart">♡</span>
+  </section>
+  <section class="w" id="wTasks" data-box="25,768,400,1100">
+    <header><span class="chk">✓</span><strong>مهامي اليومية</strong><button id="addTask" aria-label="إضافة مهمة">+</button></header>
+    <div id="taskList"></div>
+    <div class="prog"><i id="progBar"></i></div><footer><span id="taskCount">0 / 0</span><span class="bars">▂▄▆█</span></footer>
+  </section>
+  <section class="w round" id="wBat" data-box="575,770,825,1030">
+    <button class="hs" data-act="battery" aria-label="البطارية"></button>
+    <svg viewBox="0 0 100 100"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b46bff"/><stop offset="1" stop-color="#3dff8c"/></linearGradient></defs>
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#2a1b45" stroke-width="7"/><circle id="ring" cx="50" cy="50" r="44" fill="none" stroke="url(#bg)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 50 50)" stroke-dasharray="276.5" stroke-dashoffset="276.5"/></svg>
+    <div class="bc"><i id="bolt">⚡</i><b id="bPct">--%</b><small>متبقي</small><em id="bTime">--</em></div>
+  </section>
+  <section class="w pill" id="wSearch" data-box="205,1297,668,1380"><input id="q" type="search" enterkeyhint="search" placeholder="ابحث هنا..." autocomplete="off"></section>
+  <div id="tiles"></div>
 
+  <!-- Invisible tap zones over the painted artwork (quick tools, mic, Google, dock) -->
+  <button class="hs" data-box="567,1092,683,1180" data-act="storage" aria-label="تنظيف الهاتف"></button>
+  <button class="hs" data-box="692,1092,808,1180" data-act="boost" aria-label="تسريع الأداء"></button>
+  <button class="hs" data-box="567,1190,683,1275" data-act="privacy" aria-label="حماية الخصوصية"></button>
+  <button class="hs" data-box="692,1190,808,1275" data-act="cool" aria-label="تبريد الهاتف"></button>
+  <button class="hs" data-box="75,1290,195,1385" data-act="voice" aria-label="بحث صوتي"></button>
+  <button class="hs" data-box="672,1290,790,1385" data-act="search" aria-label="بحث Google"></button>
+  <button class="hs" data-box="675,1553,800,1690" data-act="drawer" aria-label="كل التطبيقات"></button>
+  <button class="hs" data-box="80,1735,190,1840" data-act="dial" aria-label="الهاتف"></button>
+  <button class="hs" data-box="200,1735,310,1840" data-act="sms" aria-label="الرسائل"></button>
+  <button class="hs" data-box="350,1730,520,1850" data-act="drawer" aria-label="كل التطبيقات"></button>
+  <button class="hs" data-box="535,1735,645,1840" data-act="music" aria-label="الموسيقى"></button>
+  <button class="hs" data-box="665,1735,775,1840" data-act="settings" aria-label="إعدادات PHANTOM X"></button>
+</main></div>
 
-<style>
-.actionbar{display:flex;gap:8px;margin:8px 0 13px}.actionbar button{flex:1}
-.shade{position:absolute;inset:0;z-index:35;display:none;overflow:auto;padding:48px 18px 25px;background:linear-gradient(160deg,rgba(30,24,15,.98),rgba(5,5,5,.98));backdrop-filter:blur(30px)}
-.shade.show{display:block;animation:shadeIn .22s ease-out}
-@keyframes shadeIn{from{transform:translateY(-18px);opacity:.4}to{transform:translateY(0);opacity:1}}
-.shade-top{display:flex;align-items:center;justify-content:space-between;font-size:28px;font-weight:300}
-.shade-date{color:var(--muted);margin:4px 0 18px}
-.shade-controls{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.shade-controls button{min-height:68px;border:1px solid var(--line);border-radius:18px;background:#ffffff16;color:var(--gold2);font-size:20px}
-.shade-controls button small{display:block;font-size:10px;color:var(--text);margin-top:5px}
-.shade-controls button.active{background:linear-gradient(135deg,#e8c783,#9a6a2b);color:#160f06}
-.notice{padding:14px 16px;margin:10px 0;border:1px solid #ffffff20;border-radius:19px;background:#ffffff12;backdrop-filter:blur(18px)}
-.notice b{color:var(--gold2)}.notice small{float:left;color:var(--muted)}.notice p{margin:8px 0 0;font-size:13px}
-.switcher{position:absolute;inset:0;z-index:34;display:none;padding:52px 18px;background:#080808ed;backdrop-filter:blur(28px)}
-.switcher.show{display:block}
-</style>
-<script>
-function openNotifications(){
- const el=document.getElementById('notifications');
- const now=new Date();
- document.getElementById('shadeTime').textContent=now.toLocaleTimeString('ar-JO',{hour:'2-digit',minute:'2-digit'});
- document.getElementById('shadeDate').textContent=now.toLocaleDateString('ar-JO',{weekday:'long',day:'numeric',month:'long'});
- el.classList.add('show');
-}
-function closeNotifications(){document.getElementById('notifications').classList.remove('show')}
-function shadeToggle(btn){btn.classList.toggle('active');toastMsg('تم تغيير الإعداد التجريبي')}
-function clearNotices(){document.querySelectorAll('.notice').forEach(n=>n.remove());toastMsg('تم مسح الإشعارات')}
-function openSwitcher(){document.getElementById('switcher').classList.add('show')}
-function closeSwitcher(){document.getElementById('switcher').classList.remove('show')}
-let touchStartY=0,touchStartX=0;
-document.addEventListener('touchstart',e=>{if(e.touches.length){touchStartY=e.touches[0].clientY;touchStartX=e.touches[0].clientX}},{passive:true});
-document.addEventListener('touchend',e=>{
- if(!e.changedTouches.length)return;
- const dy=e.changedTouches[0].clientY-touchStartY;
- const dx=e.changedTouches[0].clientX-touchStartX;
- if(touchStartY<35 && dy>75)openNotifications();
- else if(touchStartY>innerHeight-35 && dy< -95)openSwitcher();
-},{passive:true});
-document.addEventListener('keydown',e=>{
- if(e.key==='Escape'){closeNotifications();closeSwitcher();closeControl()}
- if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();go('search')}
-});
-</script>
-
-
-<style>
-.lock-v4{position:absolute;inset:0;z-index:28;display:flex;flex-direction:column;align-items:center;padding:55px 22px 25px;background:radial-gradient(ellipse at 50% 30%,#87602a88,transparent 42%),linear-gradient(160deg,#17110a,#050505 65%,#392611);text-align:center}
-.lock-v4 .lock-date{font-size:14px;color:#f4dfb7;margin-top:55px}
-.lock-v4 .lock-clock{font-size:76px;line-height:1.1;font-weight:200;letter-spacing:-4px;color:#fff1cc;text-shadow:0 4px 28px #d5a65055}
-.lock-v4 .lock-widgets{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;margin-top:28px}
-.lock-v4 .lock-widget{border:1px solid #ffffff35;background:#ffffff16;border-radius:18px;padding:13px;backdrop-filter:blur(16px);text-align:right}
-.lock-v4 .lock-bottom{margin-top:auto;display:flex;justify-content:space-between;width:100%;align-items:center}
-.lock-v4 .hint{font-size:11px;color:#d7c8aa;margin-bottom:12px}
-.wallpaper-preview{height:145px;border-radius:20px;margin:8px 0;border:1px solid #ffffff30}
-.wallpaper-a{background:radial-gradient(circle at 30% 30%,#d4ad62,#513516 30%,#080808 72%)}
-.wallpaper-b{background:radial-gradient(circle at 70% 25%,#d7d7d7,#424242 35%,#050505 75%)}
-.wallpaper-c{background:radial-gradient(circle at 50% 40%,#7a57b4,#183c63 35%,#080808 75%)}
-.launching{animation:launch .26s ease-out}
-@keyframes launch{from{opacity:.35;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
-</style>
-<script>
-const royalGoldBasePage=page;
-page=function(p){
- if(p==='lock')return `<div class="lock-v4"><div class="lock-date" id="lockDate"></div><div class="lock-clock" id="lockClock">9:41</div><div class="lock-widgets"><div class="lock-widget"><div style="font-size:24px">☀️ 22°</div><small>عمّان · مشمس</small></div><div class="lock-widget"><div style="font-size:23px">▣ 17</div><small>الثلاثاء · التقويم</small></div></div><div class="lock-bottom"><button class="circle" onclick="toastMsg('تم فتح الكاميرا التجريبية')">◉</button><button class="circle" onclick="go('home')">⌂</button></div><div class="hint" style="margin-top:12px">اضغط زر المنزل لفتح الشاشة الرئيسية</div></div>`;
- if(p==='wallpaper')return `${head('الخلفية','تخصيص مظهر iPhone')}<p class="sub">اختر خلفية لشاشة القفل والرئيسية</p><div class="glass widget"><div class="wallpaper-preview wallpaper-a"></div><b>Royal Gold</b><button class="btn" onclick="setWallpaper('gold')">تعيين الخلفية</button></div><div class="glass widget"><div class="wallpaper-preview wallpaper-b"></div><b>Silver Night</b><button class="btn ghost" onclick="setWallpaper('silver')">تعيين الخلفية</button></div><div class="glass widget"><div class="wallpaper-preview wallpaper-c"></div><b>Hologram</b><button class="btn ghost" onclick="setWallpaper('holo')">تعيين الخلفية</button></div>`;
- if(p==='focus')return `${head('التركيز','قلّل المشتتات')}<div class="glass widget">${[['☾','عدم الإزعاج','تركيز وهدوء'],['◉','شخصي','وقت خاص بك'],['▣','العمل','إنجاز المهام'],['⌂','النوم','استرخِ ونَم']].map(x=>`<div class="row"><span class="symbol">${x[0]}</span><div class="grow"><b>${x[1]}</b><small>${x[2]}</small></div><button class="toggle" onclick="this.classList.toggle('on');toastMsg('تم تغيير وضع التركيز')"></button></div>`).join('')}</div>`;
- return royalGoldBasePage(p);
-};
-function setWallpaper(which){
- const phone=document.querySelector('.phone');
- const styles={
- gold:'radial-gradient(ellipse at 12% 12%,#76521c 0,transparent 34%),radial-gradient(ellipse at 90% 80%,#59401d 0,transparent 34%),linear-gradient(145deg,#17130d,#050505 48%,#211a10)',
- silver:'radial-gradient(ellipse at 20% 20%,#777 0,transparent 35%),linear-gradient(145deg,#262626,#050505 65%,#555)',
- holo:'radial-gradient(ellipse at 20% 20%,#654b9b 0,transparent 35%),radial-gradient(ellipse at 85% 80%,#1c6681 0,transparent 40%),linear-gradient(145deg,#090914,#050505)'
- };
- phone.style.background=styles[which]||styles.gold;
- try{localStorage.setItem('royalWallpaper',which)}catch(e){}
- toastMsg('تم تطبيق الخلفية');
-}
-function updateLockClock(){
- const t=new Date();
- const c=document.getElementById('lockClock');
- const d=document.getElementById('lockDate');
- if(c)c.textContent=t.toLocaleTimeString('ar-JO',{hour:'2-digit',minute:'2-digit'});
- if(d)d.textContent=t.toLocaleDateString('ar-JO',{weekday:'long',day:'numeric',month:'long'});
-}
-setInterval(updateLockClock,1000);
-const oldGo=go;
-go=function(p){
- try{if(navigator.vibrate)navigator.vibrate(10)}catch(e){}
- oldGo(p);
- const sc=document.getElementById('screen');
- if(sc)sc.classList.add('launching');
- if(p==='lock')updateLockClock();
-};
-document.addEventListener('DOMContentLoaded',()=>{
- try{const w=localStorage.getItem('royalWallpaper');if(w)setWallpaper(w)}catch(e){}
-});
-</script>
-
-</body></html>
+<div id="toast" role="status"></div>
+<section id="drawer" hidden>
+  <header><strong id="drTitle">كل التطبيقات</strong><button data-close="drawer" aria-label="إغلاق">✕</button></header>
+  <input id="appFilter" type="search" placeholder="ابحث عن تطبيق..." autocomplete="off">
+  <div id="appList"></div>
+</section>
+<section id="menu" hidden><div class="card"><strong id="menuTitle"></strong>
+  <button data-m="open">فتح</button><button data-m="info">معلومات التطبيق</button><button data-m="del" class="danger">إلغاء التثبيت</button><button data-close="menu">إلغاء</button></div></section>
+<section id="sheet" hidden><div class="card big">
+  <header><strong>إعدادات PHANTOM X</strong><button data-close="sheet" aria-label="إغلاق">✕</button></header>
+  <div class="row"><span id="defState">...</span><button id="setDefault" class="primary">اجعله الشاشة الرئيسية</button></div>
+  <label>المدينة (للطقس)</label><div class="row"><input id="cityIn" placeholder="مثال: عمّان"><button id="cityGo">بحث</button></div><div id="cityRes"></div>
+  <label>العبارة اليومية</label><div class="row"><input id="quoteIn"><button id="quoteSave">حفظ</button></div>
+  <label><input type="checkbox" id="opt3d"> تأثير 3D (يتحرك مع ميل الهاتف)</label>
+  <label><input type="checkbox" id="optHap"> اهتزاز خفيف عند اللمس</label>
+  <button id="btnNotif">تفعيل شارات الإشعارات (صلاحية الوصول للإشعارات)</button>
+  <button id="btnLoc">استخدام موقعي للطقس (صلاحية الموقع)</button>
+  <button id="resetSlots">إعادة ضبط تطبيقات الشاشة الرئيسية</button>
+  <small>اضغط مطولاً على أيقونة في الشاشة الرئيسية لتغييرها. اضغط مطولاً على مهمة لحذفها.</small>
+</div></section>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

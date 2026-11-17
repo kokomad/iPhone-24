@@ -1,9 +1,7 @@
 {
-  "appId": "com.khader.royalgold",
-  "appName": "Royal Gold",
-  "webDir": "www",
-  "backgroundColor": "#050505",
-  "android": {
-    "allowMixedContent": false
-  }
+  "appId": "com.phantomx.launcher",
+  "appName": "PHANTOM X Launcher",
+  "webDir": "dist",
+  "android": { "backgroundColor": "#07040f" },
+  "plugins": { "StatusBar": { "style": "DARK", "backgroundColor": "#07040f", "overlaysWebView": false } }
 }
