@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HAS_KEYSTORE: ${{ secrets.KEYSTORE_BASE64 != '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -25,52 +23,27 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Add real features to the web app
+        run: | cp app.js www/app.js grep -q 'app.js' www/index.html || sed -i 's#</body>#<script src="app.js"></script></body>#' www/index.html 
       - name: Add Android platform
         run: npx cap add android
 
+      - name: Add permissions (camera, location)
+        run: | F=android/app/src/main/AndroidManifest.xml sed -i 's#</manifest># <uses-permission android:name="android.permission.CAMERA" />\n <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />\n <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n <uses-permission android:name="android.permission.VIBRATE" />\n <uses-feature android:name="android.hardware.camera" android:required="false" />\n</manifest>#' $F grep -c 'permission.CAMERA' $F 
       - name: Generate icons and splash
         run: npx capacitor-assets generate --android --iconBackgroundColor '#0b0905' --splashBackgroundColor '#050505'
 
       - name: Sync web files
         run: npx cap sync android
 
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
+
       - name: Build debug APK
-        working-directory: android
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+        run: cd android && ./gradlew assembleDebug
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: RoyalGold-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
-
-      # ---- Signed release APK (runs only if you added the 4 secrets) ----
-      - name: Build release APK (unsigned)
-        if: env.HAS_KEYSTORE == 'true'
-        working-directory: android
-        run: ./gradlew assembleRelease
-
-      - name: Sign release APK
-        if: env.HAS_KEYSTORE == 'true'
-        env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: |
-          echo "$KEYSTORE_BASE64" | base64 -d > release.keystore
-          BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
-          IN=android/app/build/outputs/apk/release/app-release-unsigned.apk
-          $BT/zipalign -f -p 4 $IN aligned.apk
-          $BT/apksigner sign --ks release.keystore --ks-key-alias "$KEY_ALIAS" \
-            --ks-pass pass:"$KEYSTORE_PASSWORD" --key-pass pass:"$KEY_PASSWORD" \
-            --out RoyalGold-release.apk aligned.apk
-
-      - name: Upload release APK
-        if: env.HAS_KEYSTORE == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: RoyalGold-release-apk
-          path: RoyalGold-release.apk
