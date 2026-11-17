@@ -1,54 +1,61 @@
 name: Build Android APK
 
 on:
-  push:
-    branches: [main, master]
   workflow_dispatch:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
+        with: { node-version: 20 }
       - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 21
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Copy features file
-        run: cp app.js www/app.js
-
-      - name: Link features file in index.html
-        run: sed -i 's#</body>#<script src="app.js"></script></body>#' www/index.html
-
-      - name: Add Android platform
-        run: npx cap add android
-
-      - name: Add permissions
-        run: sed -i 's#</manifest>#<uses-permission android:name="android.permission.CAMERA" /><uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /><uses-permission android:name="android.permission.VIBRATE" /></manifest>#' android/app/src/main/AndroidManifest.xml
-
-      - name: Generate icons and splash
-        run: npx capacitor-assets generate --android --iconBackgroundColor '#0b0905' --splashBackgroundColor '#050505'
-
-      - name: Sync web files
-        run: npx cap sync android
-
-      - name: Make gradlew executable
-        run: chmod +x android/gradlew
-
+        with: { distribution: temurin, java-version: 21 }
+      - name: Arrange files (supports flat upload)
+        run: |
+          mkdir -p www/src www/assets native/java native/res
+          [ -f index.html ] && mv index.html www/index.html || true
+          [ -f main.js ] && mv main.js www/src/main.js || true
+          [ -f style.css ] && mv style.css www/src/style.css || true
+          [ -f phantom-x-panther.jpg ] && mv phantom-x-panther.jpg www/assets/ || true
+          [ -f AndroidManifest.xml ] && mv AndroidManifest.xml native/ || true
+          [ -f styles.xml ] && mv styles.xml native/res/ || true
+          mv ./*.java native/java/ 2>/dev/null || true
+          ls -R www native
+          test -f www/index.html
+      - name: Build web assets
+        run: |
+          npm install
+          npm run build
+      - name: Generate Capacitor Android project and apply native code
+        run: |
+          rm -rf android
+          npx cap add android
+          cp native/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
+          cp native/res/styles.xml android/app/src/main/res/values/styles.xml
+          mkdir -p android/app/src/main/java/com/phantomx/launcher
+          cp native/java/*.java android/app/src/main/java/com/phantomx/launcher/
+          npx cap sync android
       - name: Build debug APK
-        run: cd android && ./gradlew assembleDebug
-
-      - name: Upload debug APK
-        uses: actions/upload-artifact@v4
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk PHANTOM-X-Launcher.apk
+      - uses: actions/upload-artifact@v4
         with:
-          name: RoyalGold-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: phantom-x-launcher-apk
+          path: PHANTOM-X-Launcher.apk
+      - name: Publish GitHub Release (on tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: PHANTOM-X-Launcher.apk
